@@ -1,0 +1,24 @@
+@mixin coolShadow($s, $b){
+  box-shadow: $s;
+  border: $b;
+}
+.app{
+  @include coolShadow(0px 0px 20px #2596be, 3px solid #18005e);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 30px;
+  color: #2596be;
+  transition: all 1s ease-out;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.app:hover{
+  transition: all 1s ease-out;
+  transform: rotate(360deg) scale(3);
+}
+
